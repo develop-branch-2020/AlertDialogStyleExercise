@@ -5,16 +5,41 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
     </style>
 
     <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
+        <!--        <item name="colorAccent">@android:color/holo_green_dark</item>-->
+        <item name="alertDialogTheme">@style/AppTheme.AlertDialogTheme</item>
+        <!--        <item name="alertDialogStyle">@style/AppTheme.AlertDialogStyle</item>-->
     </style>
 
+    <style name="AppTheme.AlertDialogTheme" parent="ThemeOverlay.AppCompat.Dialog.Alert">
+        <item name="colorAccent">@android:color/holo_green_dark</item>
+        <item name="android:textColorPrimary">@android:color/holo_red_dark</item>
+        <item name="android:windowTitleStyle">@style/AppTheme.AlertDialogTheme.WindowTitle</item>
 
+        <!--        <item name="buttonBarButtonStyle">@style/AppTheme.AlertDialogTheme.Button</item>-->
+        <!--        <item name="buttonBarPositiveButtonStyle">@style/AppTheme.AlertDialogTheme.Button</item>-->
+        <item name="buttonBarNegativeButtonStyle">@style/AppTheme.AlertDialogTheme.Button</item>
+        <!--        <item name="buttonBarNeutralButtonStyle">@style/AppTheme.AlertDialogTheme.Button</item>-->
+    </style>
+
+    <style name="AppTheme.AlertDialogTheme.WindowTitle" parent="RtlOverlay.DialogWindowTitle.AppCompat">
+        <item name="android:textColor">@android:color/holo_orange_dark</item>
+    </style>
+
+    <style name="AppTheme.AlertDialogTheme.Button" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@android:color/holo_purple</item>
+    </style>
+
+    <style name="AppTheme.AlertDialogStyle" parent="AlertDialog.AppCompat.Light" />
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>
